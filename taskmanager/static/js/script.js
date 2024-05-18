@@ -3,6 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let sidenav = document.querySelectorAll('.sidenav');
     M.Sidenav.init(sidenav);
   
-    let elems = document.querySelectorAll('.modal');
-    M.Modal.init(elems);
+    // Modal initialisation 
+    let confirmModal= document.querySelectorAll('.modal');
+    M.Modal.init(confirmModal);
+
+    // Datepicker initialisation 
+    let datepicker = document.querySelectorAll('.datepicker');
+    M.Datepicker.init(datepicker, {
+      format: "dd mmmm, yyyy",
+      i18n: {done: "Select"}
+    });
+
+    // Select initialisation 
+    let selects = document.querySelectorAll('select');
+    M.FormSelect.init(selects);
   });
